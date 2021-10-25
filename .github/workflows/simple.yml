@@ -6,6 +6,10 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '^1.17.1' 
       - name: echo a string
         run: echo "Hello World"
       - name: multiline script
